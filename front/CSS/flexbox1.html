@@ -18,42 +18,74 @@
 
       /* 전체 대시보드 */
       .dashboard {
+        display: flex;
+        height: 100%; /*부모갸 100vh(화면높이전체)를 차지하므로 그 공간을 100% 사용하겠다*/
       }
 
       /* 왼쪽 네비게이션 */
       .nav {
-        background-color: rgb(54, 53, 53);
-        
+        width: 220px;
+        /* flex: 0 0 220px; */
+        background-color: #1e272e;
+        color: white;
+        padding: 20px;
       }
 
       /* 오른쪽 전체 영역 */
       .right {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
       }
 
       /* 상단바 */
-      .topbar {
+      .topbar { 
+        background-color: #485460;
+        height: 60px;
+        padding: 2opx;
+        color: white;
+        padding: 20px;
       }
 
       /* 콘텐츠 영역 */
       .content {
+        display: flex;
+        background-color: #d2dae2;
+        flex: 1;
+        gap: 15px;
+        padding: 20px;
       }
+
 
       /* 메인 콘텐츠 */
       .main-content {
+        background-color: white;
+        flex: 3;
+        padding: 20px;
       }
 
       /* 서브 패널 */
       .side-panel {
+        background-color: #ffa801;
+        flex: 1;
+        padding: 20px;
       }
 
       /* 하단 정보바 */
       .status {
+        background-color: #808e9b;
+        height: 40px;
+        color: white;
+        /* <아래3줄> 가운데 배치시키는 공식!!! */
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
   <body>
     <div class="dashboard">
-      <aside class="nav">왼쪽 네비게이션</aside>
+      <div class="nav">왼쪽 네비게이션</div>
 
       <div class="right">
         <header class="topbar">상단바 (검색 / 사용자 정보)</header>
